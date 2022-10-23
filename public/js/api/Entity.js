@@ -2,8 +2,7 @@
  * Класс Entity - базовый для взаимодействия с сервером.
  * Имеет свойство URL, равно пустой строке.
  * */
-class Entity {
-    static URL = ""
+ class Entity {
   /**
    * Запрашивает с сервера список данных.
    * Это могут быть счета или доходы/расходы
@@ -11,12 +10,12 @@ class Entity {
    * */
   static list(data, callback){
     createRequest({
-      url: this.URL,
-      data,
+      data, //data: data
       callback,
-      method: 'GET'
+      method: 'GET',
+      responseType: 'json',
+      url: this.URL
     });
-
   }
 
   /**
@@ -26,10 +25,11 @@ class Entity {
    * */
   static create(data, callback) {
     createRequest({
-      url: this.URL,
-      data,
+      data, //data: data
       callback,
-      method: 'PUT'
+      method: 'PUT',
+      responseType: 'json',
+      url: this.URL
     });
   }
 
@@ -37,12 +37,14 @@ class Entity {
    * Удаляет информацию о счёте или доходе/расходе
    * (в зависимости от того, что наследуется от Entity)
    * */
-  static remove(data, callback ) {
+  static remove(data, callback) {
     createRequest({
-      url: this.URL,
-      data,
+      data, 
       callback,
-      method: 'DELETE'
+      method: 'DELETE',
+      url: this.URL
     });
   }
 }
+
+Entity.URL = '';

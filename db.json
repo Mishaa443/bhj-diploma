@@ -17,6 +17,12 @@
       "email": "b@b",
       "password": "1452",
       "id": "9x2lqbfgl9iksh55"
+    },
+    {
+      "name": "Михаил Кардапольцев",
+      "email": "anna@anna",
+      "password": "123456",
+      "id": "9x2lqc4l9lk7bdt"
     }
   ],
   "accounts": [
@@ -29,12 +35,16 @@
       "name": "Магазин",
       "user_id": "1",
       "id": "2"
-
     },
     {
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "Зарплата",
+      "user_id": "9x2lqc4l9lk7bdt",
+      "id": "9x2lqc4l9lk7uof"
     }
   ],
   "transactions": [
@@ -172,6 +182,33 @@
       "sum": 300000,
       "type": "expense",
       "user_id": "1"
+    },
+    {
+      "id": "9x2lq8tkl9lh9kzu",
+      "type": "income",
+      "name": "Main",
+      "sum": 234,
+      "account_id": "1",
+      "user_id": "1",
+      "created_at": "2022-10-23T15:01:17.322Z"
+    },
+    {
+      "id": "9x2lq8tkl9lh9s7u",
+      "type": "income",
+      "name": "Main",
+      "sum": 234,
+      "account_id": "3",
+      "user_id": "1",
+      "created_at": "2022-10-23T15:01:26.682Z"
+    },
+    {
+      "id": "9x2lqc4l9lk83yu",
+      "type": "income",
+      "name": "1",
+      "sum": 5000,
+      "account_id": "9x2lqc4l9lk7uof",
+      "user_id": "9x2lqc4l9lk7bdt",
+      "created_at": "2022-10-23T16:24:07.446Z"
     }
   ]
 }

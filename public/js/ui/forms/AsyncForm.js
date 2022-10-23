@@ -13,6 +13,9 @@ class AsyncForm {
    * через registerEvents()
    * */
   constructor(element) {
+    if (!element) {
+			throw new Error("Элемент не передан в AsyncForm");
+		}
     this.element = element;
     this.registerEvents();
   }
